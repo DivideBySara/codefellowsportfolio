@@ -1,4 +1,18 @@
 
+header section {
+  color: rgba(169, 226, 252, 1); /* light blue */
+}
+
+.header-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1%;
+  list-style: none;
+  clear: both;
+  font-size: 150%;
+}
+
 .icon-menu {
   font-size: 300%;
 }
