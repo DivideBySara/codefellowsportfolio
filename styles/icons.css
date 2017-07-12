@@ -24,47 +24,20 @@
 }
 
 .icon-home:before {
-	content: "\e908";
-}
-.icon-home3:before {
-	content: "\e900";
-}
-.icon-address-book:before {
-	content: "\e901";
-}
-.icon-rocket:before {
-	content: "\e909";
-}
-.icon-power:before {
-	content: "\e90a";
-}
-.icon-menu:before {
 	content: "\e902";
 }
-.icon-link:before {
-	content: "\e903";
+.icon-home3:before {
+	content: "\e902";
 }
-.icon-happy:before {
-	content: "\e904";
+.icon-books:before {
+	content: "\e920";
 }
-.icon-happy2:before {
-	content: "\e905";
-}
-.icon-plus:before {
-	content: "\e90b";
-}
-.icon-minus:before {
-	content: "\e90c";
-}
-.icon-cross:before {
-	content: "\e90d";
-}
-.icon-checkmark:before {
-	content: "\e90e";
+.icon-menu:before {
+	content: "\e9bd";
 }
 .icon-twitter3:before {
-	content: "\e906";
+	content: "\ea96";
 }
 .icon-github:before {
-	content: "\e907";
+	content: "\eab0";
 }

@@ -3,25 +3,44 @@
   <meta charset="utf-8">
   <title>Code Fellows 301 Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-  <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="vendor/styles/normalize.css">
+  <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/module.css">
 </head>
 <body>
+
   <header>
+    <section>
       <h1>DivideBySara's Online Presence</h1>
-      <h2>Aka My Code Fellows 301 Portfolio</h2>
-    <nav class="main-nav">
+      <h2>My Code Fellows 301 Portfolio</h2>
+    </section>
+    <nav>
       <i class="icon-menu"></i>
       <ul>
-        
+        <li><a href="#" class="icon-home">Home</a></li>
+        <li><a href="#" class="icon-books">About</a></li>
+        <li><a href="https://twitter.com/BrightSideSara" target="_blank" class="icon-twitter3">Twitter</a></li>
+        <li><a href="https://github.com/dividebysara" target="_blank" class="icon-github">GitHub</a></li>
       </ul>
     </nav>
   </header>
 
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-    crossorigin="anonymous"></script>
+  <main>
+    <section id="websites">
+      <article class="template">
+        <header>
+          <h1>Title</h1>
+          <div class="byline">
+            By <address><a class="url" href="">Author Name</a></address>
+          </div>
+        </header>
+        <section class="desc"></section>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="scripts/websiteTable.js"></script>
   <script src="scripts/portfolio.js"></script>
 </body>

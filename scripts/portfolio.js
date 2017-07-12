@@ -1,29 +1,40 @@
 /* jshint browser: true, devel: true, esversion: 6 */
 
-$(document).ready(function() {
+//$(document).ready(function(websiteData) {
   'use strict';
-  /* Test that base.css, jQuery CDN & portfolio.js are operational
-  $('h1').addClass('blue');*/
+  //Test that base.css, jQuery CDN & portfolio.js are operational
+  //$('h1').addClass('blue');
 
-  // 7/11/17 adapted from stackoverflow.com as temporary generic code
-  // TODO: fix constructor function to model my project
-  let Stuff = function() {
-    this.add = function() {
-      alert('add');
-      return this;
-    };
+  let websites = [];
 
-    this.del = function() {
-      alert('delete');
-      return this;
-    };
+  // constructor
+  function Website (websiteData) {
+    this.title = websiteData.title;
+    this.url = websiteData.url;
+    this.desc = websiteData.desc;
+    this.author = websiteData.author;
+  }
 
-    if (this instanceof Stuff) {
-      return this.Stuff;
-    } else {
-      return new Stuff();
-    }
+  // Build website to use on index.html
+  Website.prototype.toHtml = function() {
+    let $newWebsite = $('article.template').clone();
+    $newWebsite.removeClass('template');
+
+    $newWebsite.find('h1').text(this.title);
+    $newWebsite.find('.url').text(this.author).attr('href', this.url);
+    $newWebsite.find('.desc').html(this.desc);
+
+    $newWebsite.append('<hr>');
+    return $newWebsite;
   };
-  let test = new Stuff();
-  test.add().del();
-});
+
+  // Push website into websites array
+  websiteData.forEach(function(websiteObject) {
+    websites.push(new Website(websiteObject));
+  });
+
+  // Append website data to index.html
+  websites.forEach(function(website) {
+    $('#websites').append(website.toHtml());
+  });
+//});
