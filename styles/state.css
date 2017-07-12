@@ -1,0 +1,15 @@
+@media (min-width: 800) {
+  .icon-menu {
+    display: none;
+  }
+
+  .header-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    list-style: none;
+    clear: both;
+    font-size: 150%;
+  }
+}
