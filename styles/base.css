@@ -1,7 +1,10 @@
-/*
 
-Test that base.css, portfolio.css, & jQuery CDN are operational
-
+/* Test that jQuery, portfolio.css, and base.css are operational
 .blue {
   color: blue;
-}*/
+} */
+
+body {
+  background-color: rgba(51, 16, 81, 1); /* dark purple */
+  color: #fff;
+}
