@@ -1,11 +1,20 @@
 
+h1, h2 {
+  font-size: 300%;
+  text-align: center;
+}
+
 header section {
   min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+
   color: #fff;
+  font-size: 200%;
+}
+
+header h2 {
   font-size: 200%;
 }
 
@@ -15,12 +24,13 @@ header section {
 
 .header-nav ul {
   display: none;
+  list-style: none;
 }
 
 .header-nav ul a {
-    color: #fff;
-    text-decoration: none;
-    list-style: none;
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
 }
 
 .header-nav ul li:hover a {
@@ -41,4 +51,9 @@ main {
 
 article {
   text-align: center;
+}
+
+#about h2 {
+  font-size: 200%;
+  text-align: right;
 }

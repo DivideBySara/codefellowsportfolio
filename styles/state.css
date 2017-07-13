@@ -1,4 +1,4 @@
-@media (min-width: 800) {
+@media (min-width: 800px) {
   .icon-menu {
     display: none;
   }
@@ -8,8 +8,16 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 1%;
-    list-style: none;
     clear: both;
     font-size: 150%;
+  }
+
+  #about section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #about section * {
+    padding: 1%;
   }
 }
