@@ -1,1 +1,8 @@
+/* Test that layout.css and index.html are linked. */
+/*h1 {
+  color: blue;
+}*/
 
+body {
+  box-sizing: border-box;
+}
