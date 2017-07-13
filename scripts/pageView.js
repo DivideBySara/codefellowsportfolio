@@ -26,4 +26,4 @@ pageView.handleMainNav = function() {
 // Call all functions once DOM is ready:
 $(document).ready(function() {
   pageView.handleMainNav();
-})
+});
