@@ -27,6 +27,11 @@ header h2 {
   list-style: none;
 }
 
+.header-nav:hover ul {
+  display: block;
+  font-size: 200%;
+}
+
 .header-nav ul a {
   color: #fff;
   text-decoration: none;
