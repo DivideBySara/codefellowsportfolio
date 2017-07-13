@@ -1,6 +1,12 @@
 
 header section {
-  color: rgba(169, 226, 252, 1); /* light blue */
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 200%;
 }
 
 .icon-menu {
@@ -13,6 +19,8 @@ header section {
 
 .header-nav ul a {
     color: #fff;
+    text-decoration: none;
+    list-style: none;
 }
 
 .header-nav ul li:hover a {
@@ -29,4 +37,8 @@ main {
 
 .template {
   display: none;
+}
+
+article {
+  text-align: center;
 }
