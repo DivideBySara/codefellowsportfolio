@@ -12,6 +12,18 @@
     font-size: 150%;
   }
 
+  .header-nav:hover ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 150%;
+  }
+
+  /* Make the font-size 200% for the li that is hovered over */
+  li a:hover {
+    font-size: 200%;
+  }
+
   #about section {
     display: flex;
     flex-direction: row;
