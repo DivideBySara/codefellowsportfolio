@@ -53,6 +53,10 @@ article {
   text-align: center;
 }
 
+#about {
+  background-color: rgba(6, 66, 25, 1);
+}
+
 #about h2 {
   font-size: 200%;
   text-align: right;
