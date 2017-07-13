@@ -24,7 +24,7 @@ header section {
 }
 
 .header-nav ul li:hover a {
-    color: rgba(169, 226, 252, 1); /* light blue */
+    color: #00cfff; /* bright blue */
 }
 
 .header-nav ul li:active a {
