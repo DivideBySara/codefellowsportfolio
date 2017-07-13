@@ -1,10 +1,19 @@
-
-/* Test that jQuery, portfolio.css, and base.css are operational*/
-/*.blue {
-  color: blue;
-} */
-
 body {
   background-color: rgba(51, 16, 81, 1); /* dark purple */
+  font-size: 100%;
   color: #fff;
 }
+
+hr {
+  margin: 1%;
+  width: 80%;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5 {
+  text-align: center;
+}
+
+h1 {font-size: 300%;}
+
+h2 {font-size: 200%;}

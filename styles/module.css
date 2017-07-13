@@ -1,22 +1,13 @@
 
-h1, h2 {
-  font-size: 300%;
-  text-align: center;
-}
 
 header section {
   min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   color: #fff;
-  font-size: 200%;
 }
 
-header h2 {
-  font-size: 200%;
-}
 
 .icon-menu {
   font-size: 300%;
