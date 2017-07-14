@@ -1,7 +1,10 @@
+html {font-size: 1em;}
+
 body {
   background-color: rgba(51, 16, 81, 1); /* dark purple */
   font-family: 'Raleway', sans-serif;
-  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.45;
   color: #fff;
 }
 
@@ -9,14 +12,30 @@ hr {
   margin: 1%;
 }
 
-/* Heading styles */
+/* Style fonts */
+
+p {margin-bottom: 1.3em;}
+
 h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
-h1 {
-  font-size: 300%;
-  font-family: 'Kaushan Script', cursive;
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
 }
 
-h2 {font-size: 200%;}
+h1 {
+  font-family: 'Kaushan Script', cursive;
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {font-size: 2.827em;}
+
+h3 {font-size: 1.999em;}
+
+h4 {font-size: 1.414em;}
+
+small, .font_small {font-size: 0.707em;}
