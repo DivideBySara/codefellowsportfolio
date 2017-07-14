@@ -39,3 +39,14 @@ h3 {font-size: 1.999em;}
 h4 {font-size: 1.414em;}
 
 small, .font_small {font-size: 0.707em;}
+
+/* Style links */
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover, a:focus {
+  color: #00cfff; /* bright blue */
+}
