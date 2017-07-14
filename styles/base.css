@@ -1,5 +1,6 @@
 body {
   background-color: rgba(51, 16, 81, 1); /* dark purple */
+  font-family: 'Raleway', sans-serif;
   font-size: 100%;
   color: #fff;
 }
@@ -13,6 +14,9 @@ h1, h2, h3, h4, h5 {
   text-align: center;
 }
 
-h1 {font-size: 300%;}
+h1 {
+  font-size: 300%;
+  font-family: 'Kaushan Script', cursive;
+}
 
 h2 {font-size: 200%;}
