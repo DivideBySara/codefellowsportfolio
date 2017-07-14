@@ -1,8 +1,6 @@
 /* jshint browser: true, devel: true, esversion: 6 */
 
 'use strict';
-//Test that base.css, jQuery, and pageView.js are linked
-//$('h1').addClass('blue');
 
 // Configure a view object, to hold all our functions for dynamic updates and page-related event handlers
 let pageView = {};
