@@ -1,4 +1,7 @@
 @media (min-width: 800px) {
+
+  /* Header styles */
+
   .icon-menu {
     display: none;
   }
@@ -19,11 +22,16 @@
     font-size: 150%;
   }
 
-  /* Make the font-size 200% for the li that is hovered over */
   li a:hover {
     font-size: 200%;
   }
 
+  /* Main Style */
+
+  main {max-width: 800px;}
+
+  /* About Styles */
+  
   #about section {
     display: flex;
     flex-direction: row;

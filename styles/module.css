@@ -1,3 +1,5 @@
+/* Header styles */
+
 header section {
   min-height: 400px;
   display: flex;
@@ -5,7 +7,6 @@ header section {
   justify-content: center;
   color: #fff;
 }
-
 
 .icon-menu {
   font-size: 300%;
@@ -21,37 +22,32 @@ header section {
   font-size: 200%;
 }
 
-.header-nav ul a {
-  color: #fff;
-  text-decoration: none;
-  list-style: none;
-}
-
-.header-nav ul li:hover a {
-    color: #00cfff; /* bright blue */
-}
-
-.header-nav ul li:active a {
-    color: #fff;
-}
-
-main {
-  background-color: rgba(32, 42, 58, 1); /* dark gray */
-}
-
 .template {
   display: none;
 }
 
-article {
+/* Websites styles */
+
+#websites {
+  background-color: rgba(32, 42, 58, 1); /* dark gray */
   text-align: center;
+  margin-bottom: 0;
 }
 
 #about {
   background-color: rgba(0, 46, 15, 1); /* dark green */
+  margin-top: 0;
 }
 
-#about h2 {
-  font-size: 200%;
+/* About styles */
+
+#about * {
+  margin: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#about h3 {
+  font-family: 'Kaushan Script', cursive;
   text-align: right;
 }
