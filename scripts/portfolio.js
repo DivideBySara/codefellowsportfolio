@@ -1,8 +1,6 @@
 /* jshint browser: true, devel: true, esversion: 6 */
 
 'use strict';
-//Test that base.css, jQuery CDN & portfolio.js are operational
-//$('h1').addClass('blue');
 
 let websites = [];
 
