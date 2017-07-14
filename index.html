@@ -20,9 +20,9 @@
   <link rel="stylesheet" href="styles/module.css">
   <link rel="stylesheet" href="styles/state.css">
   <script type="text/x-handlebars-template" id="websiteTemplate">
-    <article data-category="{{category}}" data-author="{{author}}">
+    <website data-category="{{category}}" data-author="{{author}}">
       <header>
-        <h1>{{title}}</h1>
+        <h2>{{title}}</h2>
         <div class="byline">
           By <address><a href="{{authorUrl}}">{{author}}</a></address>
           published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
@@ -34,7 +34,7 @@
        </div>
       </section>
       <hr/>
-    </article>
+    </website>
   </script>
 </head>
 <body>
@@ -57,14 +57,15 @@
 
   <main> <!-- Main is the "wrapper" for everything except the header and footer. -->
 
+  <!-- handlebars-generated content goes here -->
   <section id="websites" class="tab-content"></section>
 
   <section id="about" class="tab-content">
     <header>
-      <h1>About Me</h1>
+      <h2>About Me</h2>
     </header>
     <section>
-      <h2>I am a <br> software development apprentice at Microsoft via Apprenti.</h2>
+      <h3>I am a <br> software development apprentice at Microsoft via Apprenti.</h3>
       <h4>
         I created this website portfolio as part of my Code Fellows training in full-stack web development.
         As long as I have built all of these websites, why not create a metasite? I hope you enjoy my work. :-)
