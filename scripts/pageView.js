@@ -11,15 +11,24 @@ pageView.handleMainNav = function() {
   $('.icon-home').on('click', function(){
     $('.tab-content').hide();
     $('#websites').fadeIn();
-    //$('.icon-home').off();
   });
   // About tab
   $('.icon-books').on('click', function(){
     $('.tab-content').hide();
     $('#about').fadeIn();
-    //$('.icon-home').off();
   });
 };
+
+//TODO: Filter functions can be insterted here
+// pageView.handleCategoryFilter = function() {
+//   //make jquery object
+//   //grab filter tag
+//   //add category options to list
+//   //detect change
+//   //hide everything
+//   //show selected
+//   //fade in preferred
+// }
 
 // Call all functions once DOM is ready:
 $(document).ready(function() {
