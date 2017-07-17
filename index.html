@@ -23,10 +23,9 @@
   <script type="text/x-handlebars-template" id="websiteTemplate">
     <website data-category="{{category}}" data-author="{{author}}">
       <header>
-        <!-- TODO: Move the authorURL from the author's name to the title to make the tile name clickable -->
-        <h2>{{title}}</h2>
+        <!-- DONE: Move the url from the author's name to the title to make the tile name clickable -->
+        <h2><a href="{{url}}">{{title}}</a></h2>
         <div class="byline">
-          By <address><a href="{{authorUrl}}">{{author}}</a></address>
           published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
         </div>
       </header>
