@@ -23,6 +23,7 @@
   <script type="text/x-handlebars-template" id="websiteTemplate">
     <website data-category="{{category}}" data-author="{{author}}">
       <header>
+        <!-- TODO: Move the authorURL from the author's name to the title to make the tile name clickable -->
         <h2>{{title}}</h2>
         <div class="byline">
           By <address><a href="{{authorUrl}}">{{author}}</a></address>
@@ -63,8 +64,10 @@
   <!-- handlebars-generated content goes here -->
   <section id="websites">
     <div>
+      <!-- TODO: Add in the functionality behind the filters displayed on this page -->
       <ul id="filters">
         <li>
+          <!-- TODO: Decided not to have author filter. Remove this from HTML page -->
           <select id="author-filter">
             <option value="">-- Filter by Authors --</option>
           </select>

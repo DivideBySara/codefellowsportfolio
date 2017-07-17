@@ -11,6 +11,7 @@ function Website (websiteData) {
   this.desc = websiteData.desc;
   this.author = websiteData.author;
   this.publishedOn = websiteData.publishedOn;
+  this.category = websiteData.category;
 }
 
 Website.prototype.toHtml = function() {
