@@ -61,9 +61,24 @@
   <main> <!-- Main is the "wrapper" for everything except the header and footer. -->
 
   <!-- handlebars-generated content goes here -->
-  <section id="websites" class="tab-content"></section>
+  <section id="websites">
+    <div>
+      <ul id="filters">
+        <li>
+          <select id="author-filter">
+            <option value="">-- Filter by Authors --</option>
+          </select>
+        </li>
+        <li>
+          <select id="category-filter">
+            <option value="">-- Filter by Categories --</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-  <section id="about" class="tab-content">
+  <section id="about">
     <header>
       <h2>About Me</h2>
     </header>

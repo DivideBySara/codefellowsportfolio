@@ -22,7 +22,7 @@
     font-size: 150%;
   }
 
-  li a:hover {
+  li a:hover, a:focus {
     font-size: 200%;
   }
 
@@ -31,7 +31,7 @@
   main {max-width: 800px;}
 
   /* About Styles */
-  
+
   #about section {
     display: flex;
     flex-direction: row;
