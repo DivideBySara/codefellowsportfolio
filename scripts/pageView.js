@@ -11,15 +11,11 @@ pageView.handleMainNav = function() {
   $('.icon-home').on('click', function(){
     $('.tab-content').hide();
     $('#websites').fadeIn();
-    //TODO: Remove commented-out code that you aren't using.
-    //$('.icon-home').off();
   });
   // About tab
   $('.icon-books').on('click', function(){
     $('.tab-content').hide();
     $('#about').fadeIn();
-    //TODO: Remove commented-out code that you aren't using.
-    //$('.icon-home').off();
   });
 };
 
