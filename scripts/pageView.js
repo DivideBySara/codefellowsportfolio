@@ -19,18 +19,30 @@ pageView.handleMainNav = function() {
   });
 };
 
-//TODO: Filter functions can be insterted here
-// pageView.handleCategoryFilter = function() {
-//   //make jquery object
-//   //grab filter tag
-//   //add category options to list
-//   //detect change
-//   //hide everything
-//   //show selected
-//   //fade in preferred
-// }
+// Filter categories must be added before they can be selected!
+pageView.addFilterCategories = function() {
+  $('website').each(function() {
+    let catValue = $(this).attr('data-category');
+    let catOptions = `<option value="${catValue}">${catValue}</option>`;
+    if ($(`#category-filter option[value="${catValue}"]`).length === 0) {
+      $('#category-filter').append(catOptions);
+    } // else no need to append
+  });
+};
+
+//TODO:
+// Handle category-filter selection
+pageView.handleCategoryFilter = function() {
+  $('#category-filter').on('change', function() {
+    $('#websites').hide();
+    // 3rd: FadeIn only particular category selected
+    $(`website[data-category="${$(this).val()}"]`).fadeIn(1000);
+  });
+}
 
 // Call all functions once DOM is ready:
 $(document).ready(function() {
   pageView.handleMainNav();
+  pageView.addFilterCategories();
+  pageView.handleCategoryFilter();
 });

@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="vendor/styles/normalize.css">
   <link rel="stylesheet" href="vendor/style.css">
-  <!-- <link rel="stylesheet" href="styles/icons.css"> -->
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/base.css">
@@ -23,11 +22,9 @@
   <script type="text/x-handlebars-template" id="websiteTemplate">
     <website data-category="{{category}}" data-author="{{author}}">
       <header>
-        <!-- TODO: Move the authorURL from the author's name to the title to make the tile name clickable -->
-        <h2>{{title}}</h2>
-        <div class="byline">
-          By <address><a href="{{authorUrl}}">{{author}}</a></address>
-          published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
+        <h2><a href="{{url}}">{{title}}</a></h2>
+        <div>
+          published <time>{{publishedOn}}</time>
         </div>
       </header>
       <section class="website-body">
@@ -61,14 +58,14 @@
 
   <main> <!-- Main is the "wrapper" for everything except the header and footer. -->
 
-  <!-- handlebars-generated content goes here -->
-  <section id="websites">
     <div>
-      <!-- TODO: Add in the functionality behind the filters displayed on this page -->
-          <select id="category-filter">
-            <option value="">-- Categories --</option>
-          </select>
+        <select id="category-filter">
+          <option value=""> Categories </option>
+        </select>
     </div>
+
+  <section id="websites">
+    <!-- handlebars-generated content goes here -->
   </section>
 
   <section id="about">

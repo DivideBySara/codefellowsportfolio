@@ -9,7 +9,7 @@ let websiteData = [
     author: 'Sara Jade',
     desc:  '<h4>My site of sites</h4>',
     publishedOn: '2017-4-01',
-    category: 'meta'
+    category: 'Meta'
   },
   {
     title: 'StepTwoSara',
