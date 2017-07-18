@@ -9,7 +9,9 @@
     "$": true,
     "marked": true,
     "hljs": true,
-    "websiteData": true
+    "websiteData": true,
+    "pageView": true,
+    "Website": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {

@@ -2,17 +2,18 @@
 
 'use strict';
 
-let websites = [];
-
 // constructor
-function Website (websiteData) {
-  this.title = websiteData.title;
-  this.url = websiteData.url;
-  this.desc = websiteData.desc;
-  this.author = websiteData.author;
-  this.publishedOn = websiteData.publishedOn;
-  this.category = websiteData.category;
+function Website (websites) {
+  this.title = websites.title;
+  this.url = websites.url;
+  this.desc = websites.desc;
+  this.author = websites.author;
+  this.publishedOn = websites.publishedOn;
+  this.category = websites.category;
 }
+
+// List of websites is on the constructor function, not the prototype or a global object
+Website.all = [];
 
 // Handlebars renders articles to the DOM
 Website.prototype.toHtml = function() {
@@ -23,17 +24,33 @@ Website.prototype.toHtml = function() {
   return html;
 };
 
-// Sort websiteData so that newer websites appear first
-websiteData.sort(function(a, b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+// Loads websites. In this project, website data has been parsed from JSON.
+Website.loadWebsites = function(websites) {
+  //Sort websites so that newer websites appear first
+  websites.websiteData.sort(function(a, b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
+  //Push website into websites array
+  websites.websiteData.forEach(function(website) {
+    Website.all.push(new Website(website));
+  });
+};
 
-// Push website into websites array
-websiteData.forEach(function(websiteObject) {
-  websites.push(new Website(websiteObject));
-});
-
-// Append website data to index.html
-websites.forEach(function(website) {
-  $('#websites').append(website.toHtml());
-});
+// Gets websiteData
+Website.getWebsites = function() {
+  // 1st: Check if local storage already has the data so the .js doesn't call for it again.
+  if (localStorage.websiteData) {
+    // If localStorage has the data, load it here:
+    Website.loadWebsites(JSON.parse(localStorage.websiteData)); // Don't forget to parse the JSON!
+    pageView.loadIndexPage();
+  } else { // websiteData is not in localStorage
+    // 2nd: Use AJAX to getJSON
+    $.getJSON('../data/websiteTable.json').then(function(data) {
+      localStorage.websiteData = JSON.stringify(data);
+      Website.loadWebsites(JSON.parse(localStorage.websiteData));
+      pageView.loadIndexPage();
+    }, function(errorMsg) {
+      console.error(errorMsg);
+    });
+  }
+};

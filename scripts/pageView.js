@@ -2,8 +2,8 @@
 
 'use strict';
 
-// Configure a view object, to hold all our functions for dynamic updates and page-related event handlers
-let pageView = {};
+// A global view object holds the functions
+const pageView = {};
 
 pageView.handleMainNav = function() {
   // Show page content for appropriate .tab clicked.
@@ -30,19 +30,23 @@ pageView.addFilterCategories = function() {
   });
 };
 
-//TODO:
+//TODO: Fix this function.
 // Handle category-filter selection
 pageView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     $('#websites').hide();
     // 3rd: FadeIn only particular category selected
-    $(`website[data-category="${$(this).val()}"]`).fadeIn(1000);
+    $('website[data-category="' + $(this).val() + '"]').fadeIn();
   });
-}
+};
 
-// Call all functions once DOM is ready:
-$(document).ready(function() {
+// Append website data to index.html & call pageView functions
+pageView.loadIndexPage = function() {
+  Website.all.forEach(function(website) {
+    $('#websites').append(website.toHtml());
+  });
+
   pageView.handleMainNav();
   pageView.addFilterCategories();
   pageView.handleCategoryFilter();
-});
+};
