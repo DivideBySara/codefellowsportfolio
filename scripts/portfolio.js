@@ -26,13 +26,13 @@ Website.prototype.toHtml = function() {
 
 // Loads websites. In this project, website data has been parsed from JSON.
 Website.loadWebsites = function(websites) {
-  // Sort websiteData so that newer websites appear first
-  websites.sort(function(a, b) {
+  //Sort websites so that newer websites appear first
+  websites.websiteData.sort(function(a, b) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
   });
-  // Push website into websites array
-  websites.forEach(function(website) {
-    websites.push(new Website(website));
+  //Push website into websites array
+  websites.websiteData.forEach(function(website) {
+    Website.all.push(new Website(website));
   });
 };
 
