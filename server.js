@@ -17,3 +17,8 @@ app.use(express.static('./public')); // Sets public as the root directory
 app.get('.', function(request, response) {
   response.sendFile('index.html', {root: './public'});
 });
+
+// Listen for the port and console.log() it
+app.listen(PORT, function() {
+  console.log(`Listening at port ${PORT}. Now if only that port were the drinkable kind ;-)`);
+});
