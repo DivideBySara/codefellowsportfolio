@@ -7,15 +7,10 @@ const pageView = {};
 
 pageView.handleMainNav = function() {
   // Show page content for appropriate .tab clicked.
-  // Home tab
-  $('.icon-home').on('click', function(){
+  $('.header-nav').on('click', '.tab', function(event){
+    event.preventDefault();
     $('.tab-content').hide();
-    $('#websites').fadeIn();
-  });
-  // About tab
-  $('.icon-books').on('click', function(){
-    $('.tab-content').hide();
-    $('#about').fadeIn();
+    $('#' + $(this).data('content')).fadeIn();
   });
 };
 
