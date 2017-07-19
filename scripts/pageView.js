@@ -11,13 +11,11 @@ pageView.handleMainNav = function() {
   $('.icon-home').on('click', function(){
     $('.tab-content').hide();
     $('#websites').fadeIn();
-    //$('.icon-home').off();
   });
   // About tab
   $('.icon-books').on('click', function(){
     $('.tab-content').hide();
     $('#about').fadeIn();
-    //$('.icon-home').off();
   });
 };
 
