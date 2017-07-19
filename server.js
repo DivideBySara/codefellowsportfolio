@@ -2,9 +2,8 @@
 
 'use strict';
 
-// Require express and body-parser
+// Require express
 const express = require('express');
-const bodyParser = require('body-parser');
 
 // Set a PORT
 const PORT = process.env.PORT || 3000; // The default port is 3000.
