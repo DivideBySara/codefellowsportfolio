@@ -1,0 +1,43 @@
+{
+  "name": "codefellowsportfolio",
+  "version": "1.0.0",
+  "description": "I am a software development apprentice at Microsoft via Apprenti. My Code Fellows portfolio is a metasite of projects. This metasite is written in full-stack JavaScript.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.3",
+    "body-parser": "^1.17.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DivideBySara/codefellowsportfolio.git"
+  },
+  "keywords": [
+    "Meta",
+    "JavaScript",
+    "Full-Stack",
+    "Apprentice",
+    "Portfolio",
+    "CodeFellows",
+    "Microsoft",
+    "API",
+    "JSON",
+    "AJAX",
+    "LocalStorage",
+    "Filter",
+    "MobileFirst",
+    "SocialMedia",
+    "Node.js",
+    "SMACCS",
+    "Tabs"
+  ],
+  "author": "Sara Jade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DivideBySara/codefellowsportfolio/issues"
+  },
+  "homepage": "https://github.com/DivideBySara/codefellowsportfolio#readme"
+}
