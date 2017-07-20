@@ -26,12 +26,16 @@ pageView.addFilterCategories = function() {
 };
 
 //TODO: Fix this function.
-// Handle category-filter selection
-pageView.handleCategoryFilter = function() {
+// Handle filter selection
+pageView.handleFilter = function() {
   $('#category-filter').on('change', function() {
-    $('#websites').hide();
-    // 3rd: FadeIn only particular category selected
-    $('website[data-category="' + $(this).val() + '"]').fadeIn();
+    if ($(this).val()) {
+      $('website').hide();
+      // 3rd: FadeIn only particular category selected
+      $('website[data-category="' + $(this).val() + '"]').fadeIn();
+    } else {
+      $('website').show();
+    }
   });
 };
 
@@ -43,5 +47,5 @@ pageView.loadIndexPage = function() {
 
   pageView.handleMainNav();
   pageView.addFilterCategories();
-  pageView.handleCategoryFilter();
+  pageView.handleFilter();
 };
