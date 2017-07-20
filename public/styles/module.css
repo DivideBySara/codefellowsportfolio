@@ -29,6 +29,7 @@ header section {
 /* Filter styles */
 
 select {
+  width: 100%;
   font-family: 'Kaushan Script', cursive;
   font-size: 200%;
   background-color: rgba(35, 35, 35, 1); /* dark gray */

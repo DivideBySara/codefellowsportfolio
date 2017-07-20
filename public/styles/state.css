@@ -1,3 +1,11 @@
+@media (min-width: 600px) {
+  /* Filter Style */
+
+  select {
+    width: 300px;
+  }
+}
+
 @media (min-width: 800px) {
 
   /* Header styles */
