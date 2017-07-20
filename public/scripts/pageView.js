@@ -25,8 +25,6 @@ pageView.addFilterCategories = function() {
   });
 };
 
-//TODO: Fix this function.
-// Handle filter selection
 pageView.handleFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
@@ -34,7 +32,7 @@ pageView.handleFilter = function() {
       // 3rd: FadeIn only particular category selected
       $('website[data-category="' + $(this).val() + '"]').fadeIn();
     } else {
-      $('website').show();
+      $('website').fadeIn();
     }
   });
 };
