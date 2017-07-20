@@ -29,8 +29,18 @@ header section {
 /* Filter styles */
 
 select {
+  width: 100%;
+  font-family: 'Kaushan Script', cursive;
   font-size: 200%;
   background-color: rgba(35, 35, 35, 1); /* dark gray */
+}
+
+option {
+  font-family: 'Raleway', sans-serif;
+}
+
+option:first-child[value] {
+  font-family: 'Kaushan Script', cursive;
 }
 
 /* Websites styles */
