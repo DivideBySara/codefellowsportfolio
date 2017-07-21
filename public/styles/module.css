@@ -12,6 +12,10 @@ header section {
   font-size: 300%;
 }
 
+.header-nav {
+  background-color: rgba(35, 35, 35, 1); /* dark gray */
+}
+
 .header-nav ul {
   display: none;
   list-style: none;
