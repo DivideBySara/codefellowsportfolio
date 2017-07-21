@@ -16,6 +16,8 @@
 
   .header-nav {
     height: 100px;
+    position: fixed;
+    width: 100%;
   }
 
   .header-nav ul {
@@ -35,7 +37,7 @@
   }
 
   li a:hover, a:focus {
-    font-size: 200%;
+    font-size: 150%;
   }
 
   /* Main Style */

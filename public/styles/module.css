@@ -12,14 +12,14 @@ header section {
   font-size: 300%;
 }
 
+.header-nav {
+  height: 128px;
+  background-color: rgba(35, 35, 35, 1); /* dark gray */
+}
+
 .header-nav ul {
   display: none;
   list-style: none;
-}
-
-.header-nav:hover ul {
-  display: block;
-  font-size: 200%;
 }
 
 .template {
