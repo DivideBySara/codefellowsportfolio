@@ -2,51 +2,56 @@
 
 'use strict';
 
-// TODO: use an IIFE
+var application = application || {};
 
-// A global view object holds the functions
-const pageView = {};
+(function(module) {
 
-pageView.handleMainNav = function() {
-  // Show page content for appropriate .tab clicked.
-  $('.header-nav').on('click', '.tab', function(event){
-    event.preventDefault();
-    $('.tab-content').hide();
-    $('#' + $(this).data('content')).fadeIn();
-  });
-};
+  // A global view object holds the functions
+  const pageView = {};
 
-// Filter categories must be added before they can be selected!
-pageView.addFilterCategories = function() {
-  $('website').each(function() {
-    let catValue = $(this).attr('data-category');
-    let catOptions = `<option value="${catValue}">${catValue}</option>`;
-    if ($(`#category-filter option[value="${catValue}"]`).length === 0) {
-      $('#category-filter').append(catOptions);
-    } // else no need to append
-  });
-};
+  pageView.handleMainNav = function() {
+    // Show page content for appropriate .tab clicked.
+    $('.header-nav').on('click', '.tab', function(event){
+      event.preventDefault();
+      $('.tab-content').hide();
+      $('#' + $(this).data('content')).fadeIn();
+    });
+  };
 
-pageView.handleFilter = function() {
-  $('#category-filter').on('change', function() {
-    if ($(this).val()) {
-      $('website').hide();
-      // 3rd: FadeIn only particular category selected
-      $('website[data-category="' + $(this).val() + '"]').fadeIn();
-    } else {
-      $('website').fadeIn();
-    }
-  });
-};
+  // Filter categories must be added before they can be selected!
+  pageView.addFilterCategories = function() {
+    $('website').each(function() {
+      let catValue = $(this).attr('data-category');
+      let catOptions = `<option value="${catValue}">${catValue}</option>`;
+      if ($(`#category-filter option[value="${catValue}"]`).length === 0) {
+        $('#category-filter').append(catOptions);
+      } // else no need to append
+    });
+  };
 
-// Append website data to index.html & call pageView functions
-pageView.loadIndexPage = function() {
-  // TODO: refactor forEach() to map()
-  application.Website.all.forEach(function(website) {
-    $('#websites').append(website.toHtml());
-  });
+  pageView.handleFilter = function() {
+    $('#category-filter').on('change', function() {
+      if ($(this).val()) {
+        $('website').hide();
+        // 3rd: FadeIn only particular category selected
+        $('website[data-category="' + $(this).val() + '"]').fadeIn();
+      } else {
+        $('website').fadeIn();
+      }
+    });
+  };
 
-  pageView.handleMainNav();
-  pageView.addFilterCategories();
-  pageView.handleFilter();
-};
+  // Append website data to index.html & call pageView functions
+  pageView.loadIndexPage = function() {
+    // TODO: refactor forEach() to map()
+    application.Website.all.forEach(function(website) {
+      $('#websites').append(website.toHtml());
+    });
+
+    pageView.handleMainNav();
+    pageView.addFilterCategories();
+    pageView.handleFilter();
+  };
+
+  module.pageView = pageView;
+})(application);

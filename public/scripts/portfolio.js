@@ -47,14 +47,14 @@ var application = application || {};
       // If localStorage has the data, load it here:
       let parsedData = JSON.parse(localStorage.websiteData);
       Website.loadWebsites(parsedData); // Don't forget to parse the JSON!
-      pageView.loadIndexPage();
+      application.pageView.loadIndexPage();
     } else { // websiteData is not in localStorage
       // 2nd: Use AJAX to getJSON
       $.getJSON('../data/websiteTable.json').then(function(data) {
         localStorage.websiteData = JSON.stringify(data);
         let parsedData = JSON.parse(localStorage.websiteData);
         Website.loadWebsites(parsedData);
-        pageView.loadIndexPage();
+        application.pageView.loadIndexPage();
       }, function(errorMsg) {
         console.error(errorMsg);
       });
