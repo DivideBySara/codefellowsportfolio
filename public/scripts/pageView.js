@@ -2,6 +2,8 @@
 
 'use strict';
 
+// TODO: use an IIFE
+
 // A global view object holds the functions
 const pageView = {};
 
@@ -39,6 +41,7 @@ pageView.handleFilter = function() {
 
 // Append website data to index.html & call pageView functions
 pageView.loadIndexPage = function() {
+  // TODO: refactor forEach() to map()
   Website.all.forEach(function(website) {
     $('#websites').append(website.toHtml());
   });

@@ -2,6 +2,8 @@
 
 'use strict';
 
+// TODO: use an IIFE
+
 // constructor
 function Website (websites) {
   this.title = websites.title;
@@ -31,23 +33,27 @@ Website.loadWebsites = function(websites) {
     return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
   });
   //Push website into websites array
+  // TODO: refactor forEach() to a .map()
   websites.websiteData.forEach(function(website) {
     Website.all.push(new Website(website));
   });
 };
 
 // Gets websiteData
+// TODO: break the JSON lines into smaller functions.
 Website.getWebsites = function() {
   // 1st: Check if local storage already has the data so the .js doesn't call for it again.
   if (localStorage.websiteData) {
     // If localStorage has the data, load it here:
-    Website.loadWebsites(JSON.parse(localStorage.websiteData)); // Don't forget to parse the JSON!
+    let parsedData = JSON.parse(localStorage.websiteData);
+    Website.loadWebsites(parsedData); // Don't forget to parse the JSON!
     pageView.loadIndexPage();
   } else { // websiteData is not in localStorage
     // 2nd: Use AJAX to getJSON
     $.getJSON('../data/websiteTable.json').then(function(data) {
       localStorage.websiteData = JSON.stringify(data);
-      Website.loadWebsites(JSON.parse(localStorage.websiteData));
+      let parsedData = JSON.parse(localStorage.websiteData);
+      Website.loadWebsites(parsedData);
       pageView.loadIndexPage();
     }, function(errorMsg) {
       console.error(errorMsg);
