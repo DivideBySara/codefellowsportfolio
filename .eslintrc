@@ -11,7 +11,8 @@
     "hljs": true,
     "websiteData": true,
     "pageView": true,
-    "Website": true
+    "Website": true,
+    "application": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {
