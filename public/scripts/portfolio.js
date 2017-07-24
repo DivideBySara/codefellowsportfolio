@@ -35,8 +35,19 @@ var application = application || {};
     });
     //Push website into websites array
     // TODO: refactor forEach() to a .map()
-    websites.websiteData.forEach(function(website) {
-      Website.all.push(new Website(website));
+    // websites.websiteData.forEach(function(website) {
+    //   Website.all.push(new Website(website));
+    // });
+    console.log(window);
+    application.Website.all = websites.map(function(website) {
+      return {
+        title: website.title,
+        url: website.url,
+        desc: website.desc,
+        author: website.author,
+        publishedOn: website.publishedOn,
+        category: website.category
+      };
     });
   };
 
