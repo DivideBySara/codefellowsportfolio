@@ -53,5 +53,7 @@ var application = application || {};
     pageView.handleFilter();
   };
 
+  // Next line provides app.pageView = pageView
   module.pageView = pageView;
+  
 })(application);

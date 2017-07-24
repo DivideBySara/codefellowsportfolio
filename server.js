@@ -40,6 +40,6 @@ function loadPortfolioDatabase() {
       publishedOn DATE,
       category VARCHAR);`
   )
-  .then(loadWebsites)
+  .then(loadPortfolioDatabase())
   .catch(console.error);
 }

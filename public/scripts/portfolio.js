@@ -38,17 +38,8 @@ var application = application || {};
     // websites.websiteData.forEach(function(website) {
     //   Website.all.push(new Website(website));
     // });
-    console.log(window);
-    application.Website.all = websites.map(function(website) {
-      return {
-        title: website.title,
-        url: website.url,
-        desc: website.desc,
-        author: website.author,
-        publishedOn: website.publishedOn,
-        category: website.category
-      };
-    });
+    Website.all = websites.map(element => new Website(element));
+  console.log(app.Website.all);  
   };
 
   // Gets websiteData
