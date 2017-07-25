@@ -5,8 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "pg": "^7.0.2"
+    "express": "^4.15.3"
   },
   "devDependencies": {},
   "scripts": {
