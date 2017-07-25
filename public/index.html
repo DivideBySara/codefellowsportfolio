@@ -21,7 +21,7 @@
       </header>
       <section class="website-body">
         <div>
-         {{{desc}}}
+         {{{description}}}
        </div>
       </section>
       <hr/>
@@ -45,7 +45,7 @@
     <section>
       <h1>DivideBySara</h1>
       <h2>My Online Presence</h2>
-    </section>    
+    </section>
   </header>
 
   <main> <!-- Main is the "wrapper" for everything except the header and footer. -->
@@ -57,7 +57,7 @@
     </div>
 
   <section id="websites" class="tab-content">
-    <!-- handlebars-generated content goes here -->
+    <!-- handlebars-generated websites content goes here -->
   </section>
 
   <section id="about" class="tab-content">
@@ -75,12 +75,16 @@
 
 </main>
 
+<footer id="footer">
+  <p>My websites fall into <strong id="#numCategories"> umpteen </strong> categories</p>
+</footer>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
   <script src="scripts/portfolio.js"></script>
   <script src="scripts/pageView.js"></script>
   <script>
-    Website.getWebsites();
+    application.Website.getWebsites();
   </script>
 </body>
 </html>
