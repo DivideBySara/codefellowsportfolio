@@ -9,15 +9,6 @@ var application = application || {};
   // A global view object holds the functions
   const pageView = {};
 
-  pageView.handleMainNav = function() {
-    // Show page content for appropriate .tab clicked.
-    $('.header-nav').on('click', '.tab', function(event){
-      event.preventDefault();
-      $('.tab-content').hide();
-      $('#' + $(this).data('content')).fadeIn();
-    });
-  };
-
   // Filter categories must be added before they can be selected!
   pageView.addFilterCategories = function() {
     $('website').each(function() {
@@ -48,7 +39,6 @@ var application = application || {};
       $('#websites').append(website.toHtml());
     });
 
-    pageView.handleMainNav();
     pageView.addFilterCategories();
     pageView.handleFilter();
   };
