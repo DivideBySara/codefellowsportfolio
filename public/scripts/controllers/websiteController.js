@@ -13,7 +13,7 @@ application = application || {};
   websiteController.getWebsitesSection = () => {
     module.website.getWebsites(function(){
       $('.tab.content').hide();
-      $('#articles').show();
+      $('#websites').fadeIn();
     });
   }
 
