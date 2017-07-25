@@ -33,22 +33,18 @@ var application = application || {};
     websites.websiteData.sort(function(a, b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
-    //Push website into websites array
-    // TODO: refactor forEach() to a .map()
-    // websites.websiteData.forEach(function(website) {
-    //   Website.all.push(new Website(website));
-    // });
+    // Usp map() to build each website
     Website.all = websites.websiteData.map(element => new Website(element));
-  console.log(Website.all); // should produce an array of several elements
   };
 
-  Website.numWebsites = () => {
-    let total = Website.all.map(function(website) {
-      return website.title;
-    }).reduce(function(accumulator, title){
-      return accumulator + title[0];
+// TODO: This reduce function doesn't get called??? Once working, append numCategories to the DOM.
+  Website.getNumCategories = function() {
+    let numCategories = Website.all.map(function(website) {
+      return website.category;
+    }).reduce(function(accumulator, category){
+      return accumulator + category[0];
     }, 0)
-    return total;
+    return numCategories;
   };
 
   // Gets websiteData
