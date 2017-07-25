@@ -12,7 +12,9 @@
     "websiteData": true,
     "pageView": true,
     "Website": true,
-    "application": true
+    "application": true,
+    "cString": true,
+    "pg": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {

@@ -4,13 +4,13 @@
   "description": "I am a software development apprentice at Microsoft via Apprenti. My Code Fellows portfolio is a metasite of projects. This metasite is written in full-stack JavaScript.",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "body-parser": "^1.17.2"
+    "pg": "^7.0.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",

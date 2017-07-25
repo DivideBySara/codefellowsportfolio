@@ -9,7 +9,7 @@ var application = application || {};
   function Website (websites) {
     this.title = websites.title;
     this.url = websites.url;
-    this.desc = websites.desc;
+    this.description = websites.description;
     this.author = websites.author;
     this.publishedOn = websites.publishedOn;
     this.category = websites.category;
@@ -38,8 +38,17 @@ var application = application || {};
     // websites.websiteData.forEach(function(website) {
     //   Website.all.push(new Website(website));
     // });
-    Website.all = websites.map(element => new Website(element));
-  console.log(app.Website.all);  
+    Website.all = websites.websiteData.map(element => new Website(element));
+  console.log(Website.all); // should produce an array of several elements
+  };
+
+  Website.numWebsites = () => {
+    let total = Website.all.map(function(website) {
+      return website.title;
+    }).reduce(function(accumulator, title){
+      return accumulator + title[0];
+    }, 0)
+    return total;
   };
 
   // Gets websiteData
