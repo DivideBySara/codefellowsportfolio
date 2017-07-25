@@ -9,9 +9,9 @@ application = application || {};
   // Instantiate websiteController object
   const websiteController = {};
 
-  // Use function in portfolio.js to getWebsites
-  websiteController.getWebsitesSection = () => {
-    module.website.getWebsites(function(){
+  // Use function in portfolio.js to getWebsitesSection
+  websiteController.getWebsiteSection = () => {
+    module.Website.getWebsites(function(){
       $('.tab.content').hide();
       $('#websites').fadeIn();
     });

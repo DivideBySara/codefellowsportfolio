@@ -4,8 +4,8 @@
 var application = application || {};
 
 // route for index.html
-page('/', application.websiteController.getWebsitesSection());
+page('/', application.websiteController.getWebsitesSection);
 // route for about.html
-page('/about', application.aboutController.getAboutSection());
+page('/about', application.aboutController.getAboutSection);
 // call page()
 page();
