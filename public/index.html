@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/module.css">
   <link rel="stylesheet" href="styles/state.css">
+  
   <script type="text/x-handlebars-template" id="websiteTemplate">
     <website data-category="{{category}}" data-author="{{author}}">
       <header>
@@ -27,6 +28,16 @@
       <hr/>
     </website>
   </script>
+
+  <script type="text/x-handlebars-template" id="repoTemplate">
+    <li>
+      <h3><a href="{{html_url}}" target="_blank">{{name}}</a></h3>
+      {{#if collaborators_url}}
+        <p>{{collaborators_url}} is/are collaborating on this repo</p>
+      {{/if}}
+    </li>
+  </script>
+
 </head>
 <body>
 
@@ -58,6 +69,10 @@
 
   <section id="websites" class="tab-content">
     <!-- handlebars-generated websites content goes here -->
+  </section>
+
+  <section id="githubRepos">
+    <!-- handlebars-generated githubRepos content goes here -->
   </section>
 
   <section id="about" class="tab-content">
