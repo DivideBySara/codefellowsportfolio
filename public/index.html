@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/module.css">
   <link rel="stylesheet" href="styles/state.css">
-  
+
   <script type="text/x-handlebars-template" id="websiteTemplate">
     <website data-category="{{category}}" data-author="{{author}}">
       <header>
@@ -72,7 +72,9 @@
   </section>
 
   <section id="githubRepos">
-    <!-- handlebars-generated githubRepos content goes here -->
+    <ul>
+      <!-- handlebars-generated githubRepos content goes here -->
+    </ul>
   </section>
 
   <section id="about" class="tab-content">
@@ -97,8 +99,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script src="/scripts/models/githubToken.js"></script>
   <script src="/scripts/models/portfolio.js"></script>
+  <script src="/scripts/models/githubRepos.js"></script>
   <script src="/scripts/views/pageView.js"></script>
+  <script src="/scripts/views/githubReposView.js"></script>
   <script src="/scripts/controllers/websiteController.js"></script>
   <script src="/scripts/controllers/aboutController.js"></script>
   <script src="/scripts/controllers/routes.js"></script>
