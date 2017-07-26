@@ -58,3 +58,9 @@ a, a:link, a:active {
 a:hover, a:focus {
   color: #00cfff; /* bright blue */
 }
+
+/* Unordered Lists */
+
+ul {
+  padding: 0;
+}
