@@ -5,7 +5,9 @@ var application = application || {};
 
 // route for index.html
 page('/', application.websiteController.getWebsitesSection);
-// route for about.html
+// route for about
 page('/about', application.aboutController.getAboutSection);
+// route for githubRepos
+page('/githubRepos', application.githubReposController.getGithubReposSection);
 // call page()
 page();
