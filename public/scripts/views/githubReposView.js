@@ -9,6 +9,7 @@ var application = application || {};
   // A global view object holds the functions
   const githubReposView = {};
 
+  // Handlebars generates repos
   const renderedRepos = Handlebars.compile($('#repoTemplate').html());
 
   // Next line provides application.githubReposView = githubReposView
@@ -16,9 +17,11 @@ var application = application || {};
 
   githubReposView.index = () => {
     // Removes <li>'s to prepare for reloading them
-    $('#githubRepos').child('ul').empty();
-    // Append renderedRepos (Handlebars-generated content)
-    $('repoTemplate').append(application.githubRepos.map(renderedRepos));
+    $('#githubRepos').children('ul').empty();
+    // Map repos
+    let mappedRepos = application.githubRepos.all.map(renderedRepos)
+    // Append repos
+    $('#githubRepos ul').append(mappedRepos);
   };
 
 })(application);
