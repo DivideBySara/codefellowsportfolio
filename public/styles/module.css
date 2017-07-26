@@ -68,6 +68,10 @@ option:first-child[value] {
   margin-bottom: 0;
 }
 
+#githubRepos ul {
+  list-style: none;
+}
+
 /* About styles */
 
 #about * {

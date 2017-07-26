@@ -33,9 +33,10 @@
     <li>
       <h3><a href="{{repo_url}}" target="_blank">{{name}}</a></h3>
       {{#if collaborators_url}}
-        <p>{{collaborators_url}} is/are collaborating on this repo</p>
+        <p>{{owner.login}} has a <a href="{{collaborators_url}}" target="_blank"><strong>collaborator</strong></a> on this repo</p>
       {{/if}}
     </li>
+    </hr>
   </script>
 
 </head>
