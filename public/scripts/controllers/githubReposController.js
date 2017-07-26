@@ -1,7 +1,7 @@
 /* jshint browser: true, devel: true, esversion: 6 */
 'use strict';
 
-application = application || {};
+var application = application || {};
 
 //IIFE
 (function(module) {
@@ -13,8 +13,11 @@ application = application || {};
   githubReposController.getGithubReposSection = () => {
     $('.tab-content').hide();
     $('#githubRepos').fadeIn();
+
+    // A githubReposView object is the callback so the view can render after data loads
+    application.githubRepos.requestRepos(application.githubReposView.index);
   };
 
-  // Attach aboutController to module
+  // Attach githubReposController to module
   module.githubReposController = githubReposController;
 })(application);

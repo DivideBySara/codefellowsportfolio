@@ -1,7 +1,7 @@
 /* jshint browser: true, devel: true, esversion: 6 */
 'use strict';
 
-application = application || {};
+var application = application || {};
 
 //IIFE
 (function(module) {

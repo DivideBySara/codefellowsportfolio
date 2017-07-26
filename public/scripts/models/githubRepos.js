@@ -7,7 +7,7 @@ var application = application || {};
 
   githubRepos.all = [];
 
-  githubRepos.getRepos = function(callback) {
+  githubRepos.requestRepos = function(callback) {
     // ajax call
     $.ajax({
       url: 'https://api.github.com/users/DivideBySara/repos',
@@ -18,14 +18,10 @@ var application = application || {};
     })
     .then(
       function (response) {
-        let repos = response.map(response => ({
-          repo_url: response.html_url,
-          name: response.name,
-          collaborators_url: response.collaborators_url
-        }));
-        callback(repos);
+        githubRepos.all = response;
       }
-    );
+   )
+    .then(callback);
   };
 
   module.githubRepos = githubRepos;
