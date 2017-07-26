@@ -31,12 +31,12 @@
 
   <script type="text/x-handlebars-template" id="repoTemplate">
     <li>
-      <h3><a href="{{repo_url}}" target="_blank">{{name}}</a></h3>
-      {{#if collaborators_url}}
-        <p>{{owner.login}} has a <a href="{{collaborators_url}}" target="_blank"><strong>collaborator</strong></a> on this repo</p>
-      {{/if}}
+      <h3><a href="{{html_url}}" target="_blank">{{name}}</a></h3>
+      <h4>Another <a href="{{owner.html_url}}" target="_blank"><strong>{{owner.login}}</strong></a>
+          GitHub repo
+      </h4>
     </li>
-    </hr>
+    <hr>
   </script>
 
 </head>
