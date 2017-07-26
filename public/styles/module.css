@@ -60,6 +60,18 @@ option:first-child[value] {
   margin-top: 0;
 }
 
+/* githubRepos styles */
+
+#githubRepos {
+  background-color: rgba(0, 46, 15, 1); /* dark green */
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#githubRepos ul {
+  list-style: none;
+}
+
 /* About styles */
 
 #about * {

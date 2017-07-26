@@ -14,7 +14,8 @@
     "Website": true,
     "application": true,
     "cString": true,
-    "pg": true
+    "pg": true,
+    "githubToken": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {

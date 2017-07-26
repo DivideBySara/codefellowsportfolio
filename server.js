@@ -2,20 +2,17 @@
 
 'use strict';
 
-// Require express, postgres
-const pg = require('pg');
+// Require express
 const express = require('express');
 
 // Set a PORT
 const PORT = process.env.PORT || 3000; // The default port is 3000.
 
-// Static resources (now in public directory) should be passed to app.use()
+// Static resources (now in public directory) should be passed to appplication.use()
 const app = express();
 
-// connect to database portfolio
-const cString = `postgres://postgres:${process.env.PG_PASSWORD}@localhost:5432/portfolio`;
-
-app.use(express.static('./public')); // Sets public as the root directory
+ // Sets public as the root directory
+app.use(express.static('./public'));
 
 // Write a route for the index page
 app.get('.', function(request, response) {
