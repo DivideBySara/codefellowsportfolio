@@ -8,7 +8,7 @@ var application = application || {};
   githubRepos.all = [];
 
   githubRepos.requestRepos = function(callback) {
-    $.get('/github/user/repos', function(response) {
+    $.get('/github/user/repos?affiliation=owner,collaborator', function(response) {
       githubRepos.all = response;
     })
     .then(callback);
