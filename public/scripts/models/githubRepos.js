@@ -8,21 +8,10 @@ var application = application || {};
   githubRepos.all = [];
 
   githubRepos.requestRepos = function(callback) {
-    // ajax call
-    $.ajax({
-      url: 'https://api.github.com/users/DivideBySara/repos',
-      method: 'GET',
-      headers: {
-        Authorization: `token ${githubToken}` // Token not committied to repository :-)
-      }
+    $.get('/github/user/repos', function(response) {
+      githubRepos.all = response;
     })
-    .then(
-      function (response) {
-        githubRepos.all = response;
-      }
-   )
     .then(callback);
-  };
-
+  }
   module.githubRepos = githubRepos;
 })(application);
