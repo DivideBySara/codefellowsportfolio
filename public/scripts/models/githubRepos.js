@@ -8,18 +8,10 @@ var application = application || {};
   githubRepos.all = [];
 
   githubRepos.requestRepos = function(callback) {
-    // ajax call
-    $.ajax({
-      url: '/github/users/repos',
-      method: 'GET'
+    $.get('/github/user/repos', function(response) {
+      githubRepos.all = response;
     })
-    .then(
-      function (response) {
-        githubRepos.all = response;
-      }
-   )
     .then(callback);
-  };
-
+  }
   module.githubRepos = githubRepos;
 })(application);
