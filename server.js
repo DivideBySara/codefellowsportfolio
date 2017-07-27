@@ -19,7 +19,7 @@ app.use(express.static('./public'));
 app.get('/github/*', function(request, response) {
   (proxy({
     url: `https://api.github.com/${request.params[0]}`,
-    headers: {Authorization: `token ${githubToken}`}
+    headers: {Authorization: `token ${process.env.githubToken}`}
   })
   )(request, response);
 });
