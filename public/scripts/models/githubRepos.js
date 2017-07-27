@@ -10,11 +10,8 @@ var application = application || {};
   githubRepos.requestRepos = function(callback) {
     // ajax call
     $.ajax({
-      url: 'https://api.github.com/users/DivideBySara/repos',
-      method: 'GET',
-      headers: {
-        Authorization: `token ${githubToken}` // Token not committied to repository :-)
-      }
+      url: '/github/users/repos',
+      method: 'GET'
     })
     .then(
       function (response) {

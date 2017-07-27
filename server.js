@@ -2,8 +2,9 @@
 
 'use strict';
 
-// Require express
+// Require express, proxy
 const express = require('express');
+const proxy = require('express-request-proxy');
 
 // Set a PORT
 const PORT = process.env.PORT || 3000; // The default port is 3000.
@@ -13,6 +14,15 @@ const app = express();
 
  // Sets public as the root directory
 app.use(express.static('./public'));
+
+// Set proxy route for #githubRepos
+app.get('/github/*', function(request, response) {
+  (proxy({
+    url: `https://api.github.com/${request.params[0]}`,
+    headers: {Authorization: `token ${githubToken}`}
+  })
+  )(request, response);
+});
 
 // Write a route for the index page
 app.get('.', function(request, response) {
