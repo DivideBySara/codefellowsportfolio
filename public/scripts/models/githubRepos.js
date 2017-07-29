@@ -3,15 +3,27 @@
 var application = application || {};
 
 (function(module) {
-  const githubRepos = {};
+  let githubRepos = {};
 
   githubRepos.all = [];
 
-  githubRepos.requestRepos = function(callback) {
+  githubRepos.requestRepos = function(ctx, next) { // ctx is a context object. next is the callback fxn
     $.get('/github/user/repos?affiliation=owner,collaborator', function(response) {
       githubRepos.all = response;
     })
-    .then(callback);
+    ctx.githubRepos = githubRepos.all;
+    next();
   }
+
+  githubRepos.getRepoByName = function(ctx, next) { // ctx is a context object. next is the callback fxn
+    $.get(`/githubRepos/DivideBySara/${ctx.params.name}`, function(response) {
+      githubRepos.all = response;
+    })
+    .then(function(response) {
+      ctx.githubRepos = [response];
+      next();
+    })
+  }
+
   module.githubRepos = githubRepos;
 })(application);

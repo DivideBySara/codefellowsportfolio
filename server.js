@@ -2,9 +2,10 @@
 
 'use strict';
 
-// Require express, proxy
+// Require express, proxy, body-parser
 const express = require('express');
 const proxy = require('express-request-proxy');
+const bodyParser = require('body-parser');
 
 // Set a PORT
 const PORT = process.env.PORT || 3000; // The default port is 3000.
@@ -12,10 +13,13 @@ const PORT = process.env.PORT || 3000; // The default port is 3000.
 // Static resources (now in public directory) should be passed to appplication.use()
 const app = express();
 
+// body-parser code
+app.use(bodyParser.urlencoded({extended: true}));
+
  // Sets public as the root directory
 app.use(express.static('./public'));
 
-// Set proxy route for #githubRepos
+// Set proxy route for #githubRepos. Note the IIFE.
 app.get('/github/*', function(request, response) {
   (proxy({
     url: `https://api.github.com/${request.params[0]}`,

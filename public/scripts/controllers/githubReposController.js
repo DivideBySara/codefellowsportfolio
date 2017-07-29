@@ -7,16 +7,29 @@ var application = application || {};
 (function(module) {
 
   // Instantiate githubReposController object
-  const githubReposController = {};
+  let githubReposController = {};
 
-  // Hide website and about sections. Then fadeIn githubRepos section.
-  githubReposController.getGithubReposSection = () => {
+  module.githubReposController = function(ctx, next) {
+    // Hide website and about sections. Then fadeIn githubRepos section.
+    githubReposController.getGithubReposSection = () => {
+      $('.tab-content').hide();
+      $('#githubRepos').fadeIn();
+
+      next();
+      // A githubReposView object is the callback so the view can render after data loads
+      application.githubRepos.requestRepos(application.githubReposView);
+    };
+  }
+
+ // for getting one repo in routes.js
+  githubReposController.index = function(ctx, next) {
     $('.tab-content').hide();
     $('#githubRepos').fadeIn();
 
-    // A githubReposView object is the callback so the view can render after data loads
+    next();
+
     application.githubRepos.requestRepos(application.githubReposView.index);
-  };
+  }
 
   // Attach githubReposController to module
   module.githubReposController = githubReposController;
